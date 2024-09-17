@@ -1,0 +1,33 @@
+[package]
+name = "nuccbin"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+#  used for reading and writing binary files
+binrw = "0.10.0"
+
+# used for downcasting trait objects to their concrete types for serialization
+downcast-rs = "1.2.0"
+
+# used for serializing and deserializing nuccChunkBinary structs
+serde = { version = "1.0.106", features = ["derive"] }
+
+# used for writing those nuccChunkBinary structs to json
+serde_json = "1.0.106"
+
+# used converting enums to strings
+strum = "0.21.0"
+strum_macros = "0.21.0"
+
+# used for searching for filepath matches in the .xfbin header
+regex = "1.4.3"
+
+# used for serde support for hex strings
+hex = { version = "0.4", features = ["std", "serde"] }
+
+# used for reading and writing xfbin files
+xfbin = { path = "../xfbin-dev" }
+
